@@ -1,0 +1,12 @@
+.AppContainer {
+  padding-top: 10vh;
+}
+
+.AppContent {
+  display: flex;
+}
+
+.AppMainTable{
+  margin-left: auto;
+  margin-right: auto;
+}

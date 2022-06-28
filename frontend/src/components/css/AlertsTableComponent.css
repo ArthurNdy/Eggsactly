@@ -1,0 +1,21 @@
+#alertTable {
+  height: 50vh;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.customTable {
+  color: black;
+  text-align: center;
+  font-family: Circular-Std, sans-serif;
+}
+
+.customHeader {
+  color: #fff;
+  background-color: #6c60c5;
+  border: none;
+}
