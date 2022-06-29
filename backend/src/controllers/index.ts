@@ -1,6 +1,11 @@
-import app from "../application";
-import daily_controller from "./daily-controller";
-import alerts_controller from "./alerts-controller";
+import express = require("express");
+import { daily_controller } from "./daily-controller";
 
-app.get("/daily", daily_controller); //get data for the daily events of a patient
-app.get("/alerts", alerts_controller); //get data for the daily ESSENTIAL events of a patient
+const router = express.Router();
+
+router.get("/daily", daily_controller); //get data for the daily events of a patient
+router.get("/", (_, response) => {
+  response.json({ info: "Routing is working !" });
+});
+
+export default router;

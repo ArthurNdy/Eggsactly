@@ -1,8 +1,9 @@
 // const { customer_notifications_endpoint } = require('../../../services/internal/endpoints');
 // const { customer_notifications_treatment } = require('../../../services/internal/treatments');
-import get_daily from "../db/requests/daily";
+import { Request, Response } from "express";
+import { get_daily } from "../db/daily";
 
-async function daily_controller(_, res) {
+export async function daily_controller(_: Request, res: Response) {
   try {
     const data = await get_daily();
     res.send(data[0]);
@@ -12,5 +13,3 @@ async function daily_controller(_, res) {
     console.error(err);
   }
 }
-
-module.exports = daily_controller;
