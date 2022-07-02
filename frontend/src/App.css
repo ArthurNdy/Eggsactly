@@ -1,12 +1,33 @@
-.AppContainer {
+.HomePage {
+  background-color: #FDF292;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+.Title {
+  text-align: center;
   padding-top: 10vh;
+  padding-bottom: 10vh;
+  font-family: 'Concert One', cursive;
+  margin-bottom:0;
+  font-size: 8vh;
 }
 
-.AppContent {
-  display: flex;
+.Gif {
+  display: block;
+  height: 30vh;
+  max-height: 200px;
+  margin: auto;
 }
 
-.AppMainTable{
-  margin-left: auto;
-  margin-right: auto;
+.ButtonContainer {
+  display: block;
+  text-align: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  font-family: 'Concert One', cursive;
 }
