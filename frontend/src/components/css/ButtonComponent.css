@@ -47,7 +47,7 @@
 .button-front {
   display: block;
   position: relative;
-  padding: 12px 27px;
+  padding: 1vh 2vh;
   border-radius: 12px;
   font-size: 5vh;
   color: white;
@@ -60,7 +60,7 @@
     cubic-bezier(.3, .7, .4, 1);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 400px) {
   .button-front {
     font-size: 5vh;
     padding: 2vw 4vw;
