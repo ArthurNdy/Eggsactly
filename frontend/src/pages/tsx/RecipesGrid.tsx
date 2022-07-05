@@ -3,6 +3,9 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../css/RecipesGrid.css";
 import crackedEgg from "../../images/crackedEgg.gif";
+import sunny from "../../images/recipes/Sunny.jpg";
+// import timer from "../../images/timer.svg";
+// import { BiTimer } from "react-icons/bi";
 
 function RecipesGrid() {
   //State to show the alerts card on button click
@@ -14,60 +17,60 @@ function RecipesGrid() {
   const recipes = [
     {
       id: 1,
-      name: "John",
+      name: "sunny",
       time: "1",
       description: "Met at a party.",
     },
     {
       id: 2,
-      name: "Mary",
+      name: "sunny",
       time: "2",
       description: "Met at a party.",
     },
     {
       id: 3,
-      name: "Jane",
+      name: "sunny",
       time: "6",
       description: "Met at a party.",
     },
     {
       id: 4,
-      name: "Jane",
+      name: "sunny",
       time: "6",
       company: "Some Company, Inc",
       description: "Met at a party.",
     },
     {
       id: 5,
-      name: "Jane",
+      name: "sunny",
       time: "6",
       company: "Some Company, Inc",
       description: "Met at a party.",
     },
     {
       id: 6,
-      name: "Jane",
+      name: "sunny",
       time: "6",
       company: "Some Company, Inc",
       description: "Met at a party.",
     },
     {
       id: 7,
-      name: "Jane",
+      name: "sunny",
       time: "6",
       company: "Some Company, Inc",
       description: "Met at a party.",
     },
     {
       id: 8,
-      name: "Jane",
+      name: "sunny",
       time: "6",
       company: "Some Company, Inc",
       description: "Met at a party.",
     },
     {
       id: 9,
-      name: "Jane",
+      name: "sunny",
       time: "6",
       company: "Some Company, Inc",
       description: "Met at a party.",
@@ -76,18 +79,24 @@ function RecipesGrid() {
 
   return (
     <div className="RecipesGrid">
-      <img className="Gif" src={crackedEgg} />
-      <Container fluid>
-        <Row xs={3}>
-          {recipes.map((person) => (
-            <Col key={person.id}>
-              {/* <Card person={person} /> */}
-              <Link to="/">
+      <header>
+        <Link id="link" to="/">
+          <img id="img1" className="Gif" src={crackedEgg} />
+        </Link>
+      </header>
+      <Container>
+        <Row>
+          {recipes.map((recipe) => (
+            <Col key={recipe.id} xs={12} md={4}>
+              <Link id="link" to={`/recipes/${recipe.id}`}>
                 <Card>
-                  <Card.Header>{person.time}</Card.Header>
-                  <Card.Img variant="top" src="holder.js/100px160" />
+                  <Card.Header>
+                    {/* <BiTimer id="timer" />  */}
+                    {recipe.time} mins
+                  </Card.Header>
+                  <Card.Img variant="top" src={sunny} />
                   <Card.Body>
-                    <Card.Text>{person.name}</Card.Text>
+                    <Card.Text>{recipe.name}</Card.Text>
                   </Card.Body>
                 </Card>
               </Link>
@@ -95,7 +104,11 @@ function RecipesGrid() {
           ))}
         </Row>
       </Container>
-      <img className="Gif" src={crackedEgg} />
+      <footer>
+        <Link id="link" to="/">
+          <img id="img2" className="Gif" src={crackedEgg} />
+        </Link>
+      </footer>
     </div>
   );
 }

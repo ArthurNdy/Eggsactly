@@ -1,0 +1,69 @@
+.Recipe {
+    background-color: #FDF292;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#menu {
+    height: 10vh;
+    font-size: 6vh;
+}
+
+#container {
+    height: 64vh;
+    overflow: scroll;
+    text-align: center;
+}
+
+#recipeTitle {
+    color: rgb(240, 0, 60);
+    font-family: 'Concert One', cursive;
+    text-transform: uppercase;
+    height: 6vh;
+    font-size: 5vh;
+    margin-bottom: 2vh;
+}
+
+.fw-bold {
+    color: rgb(240, 0, 60);
+    font-family: 'Concert One', cursive;
+    text-transform: uppercase;
+}
+
+#recipeImage {
+    height: 250px;
+    margin-bottom: 1rem;
+}
+
+#body {
+    height: 74vh;
+}
+
+.Gif {
+  height: 10vh;
+}
+
+header{
+  height: 10vh; 
+  width:100%;
+  margin-bottom: 2vh;
+}
+
+.list-group {
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.list-group-item {
+    background-color: #ffd23fbd;
+    font-family: 'Concert One', cursive;
+}
+
+footer{
+  height: 10vh; 
+  width:100%;
+  margin-top: 2vh;
+}

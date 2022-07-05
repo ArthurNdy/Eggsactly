@@ -7,6 +7,7 @@ import "./index.css";
 
 import Homepage from "./pages/tsx/Homepage";
 import RecipesGrid from "./pages/tsx/RecipesGrid";
+import Recipe from "./pages/tsx/Recipe";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Routes>
         <Route path="*" element={<Homepage />} />
         <Route path="/recipes" element={<RecipesGrid />} />
+        <Route path="/recipes/:id" element={<Recipe />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
