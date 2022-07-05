@@ -15,7 +15,7 @@ ReactDOM.render(
       <Routes>
         <Route path="*" element={<Homepage />} />
         <Route path="/recipes" element={<RecipesGrid />} />
-        <Route path="/recipes/:id" element={<Recipe />} />
+        <Route path="/recipes/:id/:name" element={<Recipe />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
