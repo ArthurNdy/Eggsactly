@@ -44,7 +44,7 @@ function RecipesGrid() {
         <Row>
           {recipes.map((recipe: recipe) => (
             <Col key={recipe.id} xs={12} md={4}>
-              <Link id="link" to={`/recipes/${recipe.id}/${recipe.name}`}>
+              <Link id="link" to={`/recipes/${recipe.id}`}>
                 <Card>
                   <Card.Header>
                     {/* <BiTimer id="timer" />  */}

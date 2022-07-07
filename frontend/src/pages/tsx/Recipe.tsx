@@ -19,16 +19,38 @@ function Recipe() {
     cookware: string;
   }
 
+  interface index {
+    [key: number]: string;
+  }
+
+  const index: any = {
+    "1": "Omelette",
+    "2": "Poached",
+    "3": "Scrambled",
+    "4": "Sunny",
+    "5": "Soft",
+    "6": "Over",
+    "7": "Baked",
+    "8": "Hard",
+  };
+
   const [recipe, setRecipe] = useState<Recipe[]>([]);
-  const { id, recipe_name } = useParams();
+  const { id } = useParams();
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const recipe_id = id!;
+  console.log(recipe_id);
 
   useEffect(() => {
     //List of the events of a patient for one day
     Axios.get(`http://localhost:8000/daily/${id}`).then((response) => {
       //Set list of the events of a patient for one day
+      console.log(response.data[0].name.split(" ")[0]);
       setRecipe(response.data);
+      console.log(recipe);
     });
   }, [id]);
+
+  console.log(recipe);
 
   return (
     <div className="Recipe">
@@ -44,9 +66,7 @@ function Recipe() {
           <Image
             thumbnail={true}
             id="recipeImage"
-            src={require(`../../images/recipes/${
-              recipe_name?.split(" ")[0]
-            }.jpg`)}
+            src={require(`../../images/recipes/${index[recipe_id]}.jpg`)}
           />
           <ListGroup>
             <ListGroup.Item>
