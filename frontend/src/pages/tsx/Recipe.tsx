@@ -11,12 +11,14 @@ import Axios from "axios";
 
 function Recipe() {
   interface Recipe {
+    cookware: ReactNode;
     id: number;
     name: string;
     cooking_time: number;
     cooking_heat: string;
     description: string;
     cookware: string;
+    cooking_heat: string;
   }
 
   interface index {
